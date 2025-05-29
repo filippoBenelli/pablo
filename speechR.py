@@ -21,13 +21,8 @@ def invia_comando(modalita, stato):
     except Exception as e:
         print("Errore nella comunicazione Bluetooth:", e)
 
-# Funzione per il comando vocale "perché"
-def maperche():
-    print("maperchè")
-
 # Dizionario comandi vocali
 comandi = {
-    "perché": maperche,
     "accendi luci": lambda: invia_comando(1, 1),  # Modalità 1, Stato 1 (accendi LED)
     "spegni luci": lambda: invia_comando(1, 0),   # Modalità 1, Stato 0 (spegni LED)
     "accendi allarme": lambda: invia_comando(2, 1),  # Modalità 2, Stato 1 (accendi buzzer)
